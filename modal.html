@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/3df22e74ab.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            padding-top: 42px;
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .modal {
+            height: 80vh;
+            background-color: white;
+            width: 900px;
+            max-width: 80%;
+            /*overflow makes text not go out of modal. now you can scroll inside it*/
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+        }
+        .modal-header {
+            display: flex;
+            /*moves X to the other side of page*/
+            justify-content: space-between;
+            /*0 for top and bottom. rem=the basic font size.*/
+            padding: 0 1rem 5 1rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #777;
+        }
+        .modal-header .title {
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+        .modal-header .close-button {
+            border: none;
+            background-color: white;
+            font-size: 1.5rem;
+            align-self: flex-start;
+            padding-top: .5rem;
+            cursor: pointer;
+        }
+        .modal-body {
+            padding: 1rem;
+            overflow: auto;
+            /*takes buttons all the way down to the page*/
+            flex-grow: 1;
+        }
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            /*takes the buttons far apart. if not, they are together on right side*/
+            padding: .5rem;
+            gap: .5rem;
+        }
+        .modal-footer .btn {
+            margin-right: .5rem;
+        }
+        .btn {
+            padding: .5rem 1rem;
+            border: none;
+            cursor: pointer;
+            color: white;
+            border-radius: .5rem;
+            font-weight: bold;
+            font-size: inherit;
+        }
+        .btn-primary {
+            background-color: #1CA;
+        }
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #0A8;
+        }
+        .btn-danger {
+            background-color: #C33;
+        }
+        .btn-danger:hover, .btn-danger:focus {
+            background-color: #A11;
+        }
+
+    </style>
+</head>
+<!--modal container-->
+<body>
+    <div class="modal">
+<!--modal header-->
+        <div class="modal-header">
+            <span class="title">Title</span>
+                <button class="close-button"><i class="fa-solid fa-square-xmark"></i></button>
+        </div>
+<!--modal body-->
+        <div class="modal-body">
+            If you don't like it - change it. It's your world. The more we do this - the more it will do good things to our heart. Let your imagination be your guide. You gotta think like a tree. Decide where your cloud lives. Maybe he lives right in here. Little short strokes.
+            There it is. We'll put a happy little bush here. In life you need colors. Working it up and down, back and forth. Just use the old one inch brush. We'll do another happy little painting.
+        </div>
+<!--modal footer-->
+        <div class="modal-footer">
+            <button class="btn btn-primary">Sounds good!</button>
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
